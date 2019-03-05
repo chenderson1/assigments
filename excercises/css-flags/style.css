@@ -1,0 +1,117 @@
+html {
+  box-sizing: border-box;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  margin-bottom: 15px;
+  padding-top: 15px;
+}
+.france {
+  width: 40%;
+  margin: auto;
+  height: 260px;
+  border: solid 0.5px #d3d3fa;
+}
+.france .red {
+  float: right;
+  background: red;
+  width: 33%;
+  padding-left: 10px;
+  padding-bottom: 260px;
+}
+.france .blue {
+  float: left;
+  background: blue;
+  width: 33%;
+  padding-left: 10px;
+  padding-bottom: 260px;
+}
+
+.germany {
+  width: 40%;
+  margin: auto;
+  height: 260px;
+  border: solid 0.5px #fad6d3;
+}
+.germany .black {
+  width: 100%;
+  background: black;
+  padding: 45px;
+}
+.germany .red {
+  width: 100%;
+  background: #b60000;
+  padding: 45px;
+}
+.germany .yellow {
+  width: 100%;
+  background: #ffcd03;
+  padding: 45px;
+}
+.madagascar {
+  position: relative;
+  width: 40%;
+  margin: auto;
+  height: 260px;
+  border: solid 0.5px #d3d3fa;
+}
+.madagascar .red {
+  position: absolute;
+  right: 0;
+  background: red;
+  width: 66%;
+  padding: 65px;
+}
+.madagascar .green {
+  position: absolute;
+  right: 0;
+  bottom: 0;
+  background: green;
+  width: 66%;
+  padding: 65px;
+}
+.switzerland {
+  position: relative;
+  width: 40%;
+  margin: auto;
+  height: 260px;
+  border: solid red 53px;
+}
+
+.switzerland .red {
+  width: 33%;
+  background: red;
+  padding: 23px;
+}
+.switzerland .top-left {
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+.switzerland .top-right {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+.switzerland .bottom-left {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+}
+.switzerland .bottom-right {
+  position: absolute;
+  bottom: 0;
+  right: 0;
+}
+
+.clearfix:after {
+  display: block;
+  content: "";
+  clear: both;
+}
