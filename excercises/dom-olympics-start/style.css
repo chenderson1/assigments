@@ -1,0 +1,49 @@
+.header {
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+}
+
+.name {
+  color: peachpuff;
+}
+
+.messages {
+  display: flex;
+  flex-direction: column;
+  border: 1px solid black;
+  margin: 10px 0px;
+  padding: 20px;
+}
+
+#main {
+  margin: 30px;
+  border: 1px solid black;
+  padding: 10px;
+}
+
+.message {
+  padding: 5px;
+}
+
+.theme-one.right {
+  align-self: flex-end;
+  background-color: lightblue;
+}
+
+.theme-one.left {
+  align-self: flex-start;
+  background-color: burlywood;
+}
+
+.theme-two.right {
+  align-self: flex-end;
+  background-color: black;
+  color: white;
+}
+
+.theme-two.left {
+  align-self: flex-start;
+  color: white;
+  background-color: red;
+}
