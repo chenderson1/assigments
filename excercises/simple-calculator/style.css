@@ -1,0 +1,49 @@
+html {
+  box-sizing: border-box;
+  margin: 0;
+}
+
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+header {
+  background: grey;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+.container {
+  padding-bottom: 20px;
+}
+form {
+  position: relative;
+  border: 1px solid gray;
+  padding: 90px;
+  box-shadow: 1px 1px 10px;
+}
+label {
+  font-weight: bold;
+}
+button.form {
+  margin-right: 5px;
+  position: absolute;
+  right: 0;
+  box-shadow: 1px 1px 5px;
+}
+button.multi {
+  bottom: 110px;
+}
+button.clr-btn {
+  box-shadow: 1px 1px 10px;
+}
