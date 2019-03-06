@@ -1,26 +1,102 @@
+@font-face {
+  font-family: mario;
+  src: url(./resrource/SuperMario256.ttf);
+}
 body {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-flow: column;
-  font-family: "Bangers", Arial, Helvetica, sans-serif;
-  font-size: 1.75em;
+  font-family: "mario";
+}
+header {
+  text-align: center;
+  width: 100%;
+  background: url("http://tiny.cc/11eu3y");
+  background-size: contain;
+  color: white;
 }
 .wrapper {
-  margin-top: 30px;
+  margin-top: 70px;
 }
 form {
+  width: 90%;
+  flex-flow: row wrap;
   display: flex;
-  flex-flow: column;
-  justify-content: center;
+  justify-content: space-between;
+  padding-bottom: 5px;
+}
+form .input-container {
+  background: #f0df48;
+  position: relative;
+  padding: 20px;
+  width: 300px;
+  height: 250px;
+  margin-right: 10px;
+  border: solid 3px black;
+  box-shadow: 1px 1px 21px;
+}
+form label {
+  position: absolute;
+  font-size: 1.5em;
+  top: 27px;
+  left: 10px;
+}
+form input {
+  font-size: 1.5em;
+  text-align: center;
+  font-family: inherit;
+  width: 100px;
+  position: absolute;
+  border: solid 1px black;
+  box-shadow: 1px 1px 12px;
+  border-radius: 10px;
+  background: aliceblue;
+}
+form .goomba-input {
+  position: absolute;
+  top: 20px;
+  left: 1px;
+}
+form input:focus {
+  outline-color: #c43333;
+}
+form .input-container img {
+  position: absolute;
+  top: 172px;
+  left: 87px;
+  width: 100px;
+  height: 100px;
+  border: transparent;
+}
+form .input-container p img {
+  margin-left: 15px;
+  width: 60px;
+  height: 40px;
+  position: absolute;
+  top: -15px;
+  left: 87px;
+}
+form .input-container p {
+  position: absolute;
+  top: 100px;
+  left: 87px;
 }
 button {
+  border: double 2px aliceblue;
+  border-radius: 10px;
+  box-shadow: 1px 1px 8px;
+  margin-top: 20px;
   display: block;
-  padding: 5px;
-  font-family: "Bangers", Arial, Helvetica, sans-serif;
+  padding: 10px;
+  font-family: inherit;
   font-size: 0.8em;
 }
 footer {
+  position: absolute;
+  bottom: 0;
+  background: #098cc8;
+  color: aliceblue;
   width: 100%;
   display: flex;
   justify-content: space-around;
@@ -36,4 +112,7 @@ footer ul li {
   margin-right: 10px;
   padding-right: 10px;
   border-right: solid 2px black;
+}
+footer li a {
+  text-decoration: none;
 }
