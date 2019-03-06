@@ -1,0 +1,23 @@
+html {
+  box-sizing: border-box;
+}
+*,
+*:before,
+*:after {
+  box-sizing: inherit;
+}
+
+.wrapper {
+  position: relative;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.square {
+  position: absolute;
+  top: 200px;
+  width: 375px;
+  height: 375px;
+  border: solid 1px black;
+  background: black;
+}
