@@ -1,0 +1,39 @@
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  flex-flow: column;
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
+  font-size: 1.75em;
+}
+.wrapper {
+  margin-top: 30px;
+}
+form {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+}
+button {
+  display: block;
+  padding: 5px;
+  font-family: "Bangers", Arial, Helvetica, sans-serif;
+  font-size: 0.8em;
+}
+footer {
+  width: 100%;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
+}
+footer ul {
+  display: flex;
+  justify-content: flex-end;
+  justify-content: space-between;
+  list-style: none;
+}
+footer ul li {
+  margin-right: 10px;
+  padding-right: 10px;
+  border-right: solid 2px black;
+}
