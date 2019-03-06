@@ -8,6 +8,7 @@ body {
   align-items: center;
   flex-flow: column;
   font-family: "mario";
+  background: aliceblue;
 }
 header {
   text-align: center;
