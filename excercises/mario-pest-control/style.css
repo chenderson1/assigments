@@ -61,6 +61,7 @@ form .goomba-input {
 }
 form input:focus {
   outline-color: #c43333;
+  background: #ffa1a1;
 }
 form .input-container img {
   position: absolute;
@@ -114,6 +115,13 @@ footer ul li {
   padding-right: 10px;
   border-right: solid 2px black;
 }
-footer li a {
+footer li a,
+a {
   text-decoration: none;
+  color: aliceblue;
+}
+h2 {
+  text-align: right;
+  font-size: 3em;
+  color: #da3939;
 }
