@@ -61,6 +61,8 @@
   border-radius: 5px;
 }
 /* =======================================         Responsive Layout Practice */
+
+/* mobile first */
 .wrapper-3 {
   width: 90%;
   text-align: center;
