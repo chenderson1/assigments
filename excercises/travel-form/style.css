@@ -38,6 +38,18 @@ button {
 }
 button {
   width: 90px;
+  background: #fff;
+  color: #225ea7;
+  border: 2px solid;
+  transition-duration: 0.5s, 0.7s, 0.9s;
+  transition-property: background, color, border-radius;
+}
+
+button:hover {
   background: #225ea7;
-  color: white;
+  border-radius: 10px;
+  color: #fff;
+}
+button:active {
+  background: #133560;
 }

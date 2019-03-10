@@ -26,6 +26,7 @@ function start() {
   console.log(calcObj.result);
 
   calcObj.playAgain = readline.keyInYN("Would you like another operation ?");
+
   if (calcObj.playAgain) start();
 }
 
