@@ -161,7 +161,7 @@ footer {
 footer ul {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: space-evenly;
   font-size: 3.9em;
   font-weight: lighter;
   list-style: none;
@@ -186,7 +186,7 @@ footer ul a {
   grid-template-columns: 1fr 1fr;
   grid-template-rows: repeat(4, 70px);
   list-style: none;
-  background: #f5fff4ed;
+  background: #f1f5f1ed;
   margin: 0;
   padding: 2% 0 0 5%;
 }
