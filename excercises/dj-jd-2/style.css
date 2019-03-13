@@ -1,0 +1,21 @@
+[class^="box"] {
+  margin: 10% auto;
+  width: 50vw;
+  height: 50vh;
+}
+.box {
+  background-image: linear-gradient(to right bottom, #00f26040, #0575e680);
+}
+.box-1 {
+  background-image: linear-gradient(45deg, #9755b6e7, #55b697e1);
+}
+.box-2 {
+  border-radius: 50%;
+  width: 25%;
+  background-image: radial-gradient(#c9c100 11%, #c95d00 0%);
+  /* transition-property: */
+  transition-duration: 1;
+}
+.box-2:hover {
+  background-image: radial-gradient(#c9c200b7, #c95d00);
+}

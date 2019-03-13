@@ -15,10 +15,16 @@ function start() {
       console.clear();
       console.log("To survive you must make a choice...".red);
     })
+    .catch(error => {
+      console.log(error);
+    })
     .then(() => {
       setTimeoutPromise(3000).then(() => {
         makeChoice();
       });
+    })
+    .catch(error => {
+      console.log(error);
     });
 }
 
@@ -35,9 +41,13 @@ function makeChoice() {
   else if (index === 2) {
     console.clear();
     console.log("You hear a noise behind yo!@FWHAT$#&IS!@*$#@....".red);
-    setTimeoutPromise(3000).then(() => {
-      start();
-    });
+    setTimeoutPromise(3000)
+      .then(() => {
+        start();
+      })
+      .catch(error => {
+        console.log(error);
+      });
   }
 }
 

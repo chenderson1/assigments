@@ -261,3 +261,20 @@ h4 {
 .dotted {
   border-bottom: 1px dotted #000;
 }
+/* ==================================================================
+
+Media Queries
+
+======================================================================*/
+
+@media (min-width: 501px) {
+  .main-header {
+  }
+  .main-header-wrapper {
+  }
+  .main-header .container {
+  }
+
+  .main-header .container img {
+  }
+}
