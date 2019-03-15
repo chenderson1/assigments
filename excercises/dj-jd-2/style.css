@@ -5,17 +5,52 @@
 }
 .box {
   background-image: linear-gradient(to right bottom, #00f26040, #0575e680);
+  border-radius: 0%;
+  transition-property: border-radius;
+  transition-duration: 1s;
+  transition-delay: 0.2s;
+}
+.box:hover {
+  border-radius: 50%;
 }
 .box-1 {
   background-image: linear-gradient(45deg, #9755b6e7, #55b697e1);
+  border: 0 solid black;
+}
+.box-1:hover {
+  border-width: 75px;
 }
 .box-2 {
   border-radius: 50%;
   width: 25%;
-  background-image: radial-gradient(#c9c100 11%, #c95d00 0%);
-  /* transition-property: */
-  transition-duration: 1;
+  background-image: linear-gradient(#c9c100, #c95d00);
+  transition-property: box-shadow;
+  transition-duration: 0.6s;
 }
 .box-2:hover {
-  background-image: radial-gradient(#c9c200b7, #c95d00);
+  box-shadow: inset -75px -75px 400px #000;
+}
+
+.box-3 {
+  background-image: linear-gradient(to bottom right, #590008, #211718);
+  transition: opacity 3s;
+}
+.box-3:hover {
+  opacity: 0;
+}
+.box-4 {
+  background-image: radial-gradient(#8048f3, #4944f2);
+  transition-property: left;
+  transition-duration: 3s;
+}
+.box-4:hover {
+  position: relative;
+  left: 10%;
+}
+.box-5 {
+  background-image: linear-gradient(#70d3f3, #4224a9);
+  transition-duration: 3s;
+}
+.box-5:hover {
+  background: #000;
 }
