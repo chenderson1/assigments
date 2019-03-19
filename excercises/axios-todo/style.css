@@ -1,0 +1,93 @@
+body {
+  background-image: linear-gradient(#85a6d8, #d5fffd);
+  height: 100vh;
+  font-family: "Roboto Condensed", sans-serif;
+}
+.wrapper {
+  width: 30vw;
+  margin: 10vh auto;
+  box-shadow: 5px 5px 24px 5px #85a6d8;
+  border: 9px solid #7098d4ce;
+  border-radius: 5%;
+  background: white;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 125px auto 70px;
+  grid-template-areas:
+    "header"
+    "main"
+    "footer";
+  justify-items: center;
+  align-items: center;
+}
+img {
+  width: 50px;
+  height: 50px;
+}
+
+header {
+  width: 100%;
+  text-align: center;
+  grid-area: header;
+  background: #f9a255;
+  border-radius: 2%;
+}
+main {
+  margin-top: 15px;
+  width: 80%;
+  grid-area: main;
+  align-self: start;
+}
+
+.todos-list {
+  padding: 0;
+  list-style: none;
+}
+
+.todos-list li {
+  width: 100%;
+  margin: 3% 3%;
+  background: #fdf7bb;
+  box-shadow: 1px 1px 10px black;
+  display: grid;
+  grid-template-columns: 1fr 2fr 2fr;
+  grid-template-rows: 40px auto 40px;
+  grid-template-areas:
+    "title title delete"
+    "img desc desc"
+    "price . check";
+}
+.todos-list li h3 {
+  /* text-align: center; */
+  margin-left: 5px;
+  padding-bottom: 1px;
+  grid-area: title;
+}
+.todos-list li button {
+  justify-self: right;
+  text-align: center;
+  width: 3px;
+  height: 3px;
+  text-align: center;
+  grid-area: delete;
+}
+.todos-list li .price {
+  margin-left: 3px;
+  grid-area: price;
+}
+.todos-list li img {
+  margin-top: 3px;
+  margin-left: 3px;
+  grid-area: img;
+}
+.todos-list li .desc {
+  grid-area: desc;
+}
+.todos-list li label {
+  align-self: end;
+  grid-area: check;
+}
+
+footer {
+  grid-area: footer;
+}
