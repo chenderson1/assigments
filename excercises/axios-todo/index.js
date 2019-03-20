@@ -5,7 +5,7 @@ let checkboxInput;
 //create variables
 const todoList = [];
 
-//grab data
+//grab data then display
 axios
   .get("https://api.vschool.io/cory/todo")
   .then(response => {
@@ -74,7 +74,9 @@ function createTodo(todo) {
   descP.querySelector("span").innerText = `Desc: ${todo.description}`;
   img.setAttribute("src", `${imgUrl}`);
   input.checked = todo.completed;
-  checkboxInput = document.querySelector(".checkbox");
+  //dynamic element event listeners
+  input.addEventListener("click", e => isCompleted(e, todo._id));
+  btn.addEventListener("click", e => deleteTodo(e, todo._id));
 
   return li;
 }
@@ -87,28 +89,36 @@ function displayList(singleTodo) {
   }
 }
 
-function isCompleted(e) {
-  //if e.target.parentNode.children[0].type === 'checkbox'
-  if (e.target.parentNode.children[0].type === "checkbox") {
-    let index = todoList.findIndex(
-      todo =>
-        (todo.title = e.target.parentNode.parentNode.children[0].innerText)
-    );
-
-    const body = {
-      completed: !todoList[index].completed
-    };
-    axios
-      .put(`https://api.vschool.io/cory/todo/${todoList[index]._id}`, body)
-      .then(() => {
-        todoList[index].completed = !todoList[index].completed;
+function isCompleted(e, id) {
+  todoList.map(item => {
+    if (item._id === id) {
+      axios
+        .put(`https://api.vschool.io/cory/todo/${item._id}`, {
+          completed: !item.completed
+        })
+        .then(res => {
+          todoList.map(item => {
+            if (item._id === id) {
+              item.completed = !item.completed;
+            }
+          });
+        });
+    }
+  });
+}
+function deleteTodo(e, id) {
+  todoList.map(item => {
+    if (item._id === id) {
+      axios.delete(`https://api.vschool.io/cory/todo/${item._id}`).then(res => {
+        todoList.map(item => {
+          if (item._id === id) {
+            e.target.parentNode.remove();
+          }
+        });
       });
-  }
+    }
+  });
 }
 
-function deleteTodo() {}
-
-//event listners
+//form listners
 document.todo.addEventListener("submit", addTodo);
-
-ul.addEventListener("change", isCompleted);
