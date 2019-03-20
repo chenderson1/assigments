@@ -17,11 +17,12 @@ axios
 
 function addTodo(e) {
   e.preventDefault();
+  // grab input values
   const title = document.todo.title.value;
   const description = document.todo.desc.value;
   const price = document.todo.price.value;
   const imgUrl = document.todo.imgUrl.value;
-
+  //build user info object
   const body = {
     title,
     description,
@@ -60,7 +61,7 @@ function createTodo(todo) {
   descP.innerHTML = "<span>Desc:</span>";
   label.textContent = "Task Complete";
   label.appendChild(input);
-  //   label.innerHTML('<input type="checkbox" />Task Complete');
+
   //build li
   li.appendChild(h3);
   li.appendChild(btn);
@@ -68,7 +69,7 @@ function createTodo(todo) {
   li.appendChild(descP);
   li.appendChild(img);
   li.appendChild(label);
-  //add data
+  //add data to elements
   h3.innerText = `${todo.title}`;
   priceP.querySelector("span").innerText = `Price: ${todo.price}`;
   descP.querySelector("span").innerText = `Desc: ${todo.description}`;
@@ -102,6 +103,7 @@ function isCompleted(e, id) {
               item.completed = !item.completed;
             }
           });
+          alert("Todo complete status has changed");
         });
     }
   });
@@ -115,6 +117,7 @@ function deleteTodo(e, id) {
             e.target.parentNode.remove();
           }
         });
+        alert("Todo has been removed");
       });
     }
   });
