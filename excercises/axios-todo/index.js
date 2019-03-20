@@ -29,6 +29,7 @@ function addTodo(e) {
     price,
     imgUrl
   };
+
   axios.post("https://api.vschool.io/cory/todo", body).then(res => {
     displayList(res.data);
   });
@@ -43,6 +44,7 @@ function createTodo(todo) {
   const img = document.createElement("img");
   const label = document.createElement("label");
   const input = document.createElement("input");
+  const id = document.createElement("p");
   const avatar = "https://imgplaceholder.com/420x320/ff7f7f/333333/fa-image";
   const imgUrl = todo.imgUrl || avatar;
 
@@ -55,6 +57,10 @@ function createTodo(todo) {
     "src",
     "https://imgplaceholder.com/420x320/ff7f7f/333333/fa-image"
   );
+  id.innerText = todo._id;
+  id.className = "id";
+  id.style.visibility = "hidden";
+
   //add static values
   btn.innerText = "X";
   priceP.innerHTML = "<span>Price:</span>";
@@ -69,15 +75,13 @@ function createTodo(todo) {
   li.appendChild(descP);
   li.appendChild(img);
   li.appendChild(label);
+  li.appendChild(id);
   //add data to elements
   h3.innerText = `${todo.title}`;
   priceP.querySelector("span").innerText = `Price: ${todo.price}`;
   descP.querySelector("span").innerText = `Desc: ${todo.description}`;
   img.setAttribute("src", `${imgUrl}`);
   input.checked = todo.completed;
-  //dynamic element event listeners
-  input.addEventListener("click", e => isCompleted(e, todo._id));
-  btn.addEventListener("click", e => deleteTodo(e, todo._id));
 
   return li;
 }
@@ -86,42 +90,37 @@ function displayList(singleTodo) {
   if (singleTodo) {
     ul.appendChild(createTodo(singleTodo));
   } else {
+    ul.innerHTML = "";
     todoList.map(todo => ul.appendChild(createTodo(todo)));
   }
 }
 
-function isCompleted(e, id) {
-  todoList.map(item => {
-    if (item._id === id) {
-      axios
-        .put(`https://api.vschool.io/cory/todo/${item._id}`, {
-          completed: !item.completed
-        })
-        .then(res => {
-          todoList.map(item => {
-            if (item._id === id) {
-              item.completed = !item.completed;
-            }
+function handlerClick(e) {
+  if (e.target.type === "checkbox") {
+    let li = e.target.parentNode.parentNode;
+    let id = e.target.parentNode.parentNode.querySelector(".id").innerHTML;
+    console.log(li, id);
+    todoList.map(todo => {
+      if (todo._id === id) {
+        axios
+          .put(`https://api.vschool.io/cory/todo/${id}`, {
+            completed: !todo.completed
+          })
+          .then(res => {
+            alert("Item completed status has changed");
           });
-          alert("Todo complete status has changed");
-        });
-    }
-  });
-}
-function deleteTodo(e, id) {
-  todoList.map(item => {
-    if (item._id === id) {
-      axios.delete(`https://api.vschool.io/cory/todo/${item._id}`).then(res => {
-        todoList.map(item => {
-          if (item._id === id) {
-            e.target.parentNode.remove();
-          }
-        });
-        alert("Todo has been removed");
-      });
-    }
-  });
+      }
+    });
+  } else if (e.target.type === "submit") {
+    let li = e.target.parentNode;
+    let id = e.target.parentNode.querySelector(".id").innerHTML;
+    axios.delete(`https://api.vschool.io/cory/todo/${id}`).then(res => {
+      li.remove();
+      alert(res.data.msg);
+    });
+  }
 }
 
 //form listners
 document.todo.addEventListener("submit", addTodo);
+ul.addEventListener("click", e => handlerClick(e));
