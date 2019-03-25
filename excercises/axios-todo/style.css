@@ -75,6 +75,10 @@ main {
   margin-left: 3px;
   grid-area: price;
 }
+.todos-list li .price span {
+ display: inline-block;
+ width: 60px;
+}
 .todos-list li img {
   margin-top: 3px;
   margin-left: 3px;
