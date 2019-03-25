@@ -1,0 +1,37 @@
+@import url('https://fonts.googleapis.com/css?family=Lato');
+
+*{
+    margin:0;
+    font-family: 'Lato', sans-serif;
+}
+body{
+    background: #5b80a5eb;
+}
+
+.card{
+    width: 40vw;
+    margin: 10vh auto;
+    background: #024484;
+    color: white;
+    border: 1px solid black;
+    border-radius: 10px;
+    box-shadow: 1px 1px 12px #012b54;
+    text-align: center;
+}
+.card-info{
+    margin: 15px 0;
+}
+.pet{
+    box-shadow: 1px 1px 12px #173a11;
+    background: #03796D;
+    color: white;
+    border: 1px solid red;
+    border-radius: 5px;
+    margin: 2vh 9vw;
+}
+span{
+color: #f2f24a
+}
+span.breed{
+color: #60f24a
+}
