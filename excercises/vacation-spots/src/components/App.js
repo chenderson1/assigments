@@ -43,6 +43,7 @@ const App = () => {
     } else if (spot.timeToGo === "Winter") {
       color = { backgroundColor: "blue" };
     }
+
     if (spot.timeToGo === "Spring") {
       color = { backgroundColor: "green" };
     } else if (spot.timeToGo === "Summer") {
@@ -50,6 +51,7 @@ const App = () => {
     } else if (spot.timeToGo === "Fall") {
       color = { backgroundColor: "grey" };
     }
+
     if (spot.price < 500) {
       expensive = "$";
     } else if (spot.price < 1000) {
@@ -57,6 +59,7 @@ const App = () => {
     } else if (spot.price > 1000) {
       expensive = "$$$";
     }
+
     return (
       <Card
         place={spot.place}
