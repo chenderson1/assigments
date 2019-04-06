@@ -13,22 +13,7 @@ import {
 import { StyledHeader } from "./elements";
 
 class App extends Component {
-  state = {
-    page: 1
-  };
-
-  handleClick = e => {
-    const { name } = e.target;
-    if (name === "plus") {
-      this.setState(prev => {
-        return { page: prev.page + 1 };
-      });
-    } else {
-      this.setState(prev => {
-        return { page: prev.page - 1 };
-      });
-    }
-  };
+  state = {};
 
   render() {
     return (
@@ -45,10 +30,7 @@ class App extends Component {
             path="/popular"
             render={() => (
               <MovieList
-                url={`https://api.themoviedb.org/3/discover/movie?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&page=${
-                  this.state.page
-                }`}
-                handleClick={this.handleClick}
+                url={`https://api.themoviedb.org/3/discover/movie?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&`}
               />
             )}
           />
