@@ -1,12 +1,18 @@
+@import url('https://fonts.googleapis.com/css?family=Oswald:400,700');
+
 *   {
     margin:0;
     padding:0;
     box-sizing: border-box;
+    font-family: 'Oswald', sans-serif;
+}
+body{
+    background: #3b1a7c
 }
 
 header{
-    background: #222;
-    height: 100px;
+    background: #0c0929;
+    height: 12vh;
     padding:20px;
     color: white;
 }
@@ -16,10 +22,4 @@ height:50px;
 }
 
 
-ul{
-    list-style: none;
-    
-}
-li{
-    color: white
-}
+

@@ -1,24 +1,20 @@
 import React from "react";
+import { Link } from "react-router-dom";
+import { UList, StyledLink } from "../elements";
 
 const NavBar = () => {
   return (
-    <ul>
+    <UList>
       <li>
-        {" "}
-        <a href="/" />
-        Home
+        <StyledLink to="/">Home</StyledLink>
       </li>
       <li>
-        {" "}
-        <a href="/" />
-        Top Rated
+        <StyledLink to="/toprated">Top Rated</StyledLink>
       </li>
       <li>
-        {" "}
-        <a href="/" />
-        Now Playing
+        <StyledLink to="/nowplaying">Now Playing</StyledLink>
       </li>
-    </ul>
+    </UList>
   );
 };
 

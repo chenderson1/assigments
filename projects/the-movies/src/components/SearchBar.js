@@ -1,9 +1,9 @@
-import React, { Component, Fragment } from "react";
+import React, { Component } from "react";
 import axios from "axios";
 import Movie from "./Movie";
 import { ListGrid, StyledBtn, StyledInput, StyledIcon } from "../elements";
 
-export class MovieList extends Component {
+export class SearchBar extends Component {
   state = {
     movies: [],
     searchValue: "",
@@ -41,9 +41,9 @@ export class MovieList extends Component {
     e.preventDefault();
     this.searchMovies();
   };
-
   render() {
     const { searchMovieRes, searchValue } = this.state;
+    const { children } = this.props;
 
     let mappedMovies = [];
     if (searchMovieRes.length > 0) {
@@ -55,26 +55,14 @@ export class MovieList extends Component {
         return <Movie key={movie.id} {...movie} {...this.props} />;
       });
     }
-
     return (
-      <Fragment>
-        <form onSubmit={this.handleSearchSubmit}>
-          <i class="fa fa-search" aria-hidden="true" />
-          <StyledInput
-            name="searchValue"
-            type="text"
-            value={searchValue}
-            onChange={this.onInputChange}
-            minLength="3"
-            placeholder="Title, People, Genre"
-            required
-          />
-          <StyledBtn>Search</StyledBtn>
-        </form>
-        <ListGrid>{mappedMovies}</ListGrid>
-      </Fragment>
+      <div>
+        {children({
+          movies: mappedMovies
+        })}
+      </div>
     );
   }
 }
 
-export default MovieList;
+export default SearchBar;
