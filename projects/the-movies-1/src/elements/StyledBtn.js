@@ -1,4 +1,5 @@
 import styled from "styled-components";
+import { below } from "../utilities";
 
 export const StyledBtn = styled.button`
   background: #5b7c1a;
@@ -12,4 +13,9 @@ export const StyledBtn = styled.button`
   border: transparent;
   box-shadow: 0 0 10px black;
   cursor: pointer;
+  ${below.xsmall`
+  min-width: 9vw;
+  max-width: 9vw;
+    
+  `}
 `;

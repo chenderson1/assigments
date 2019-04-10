@@ -11,6 +11,9 @@ import {
   Home
 } from "./components";
 import { StyledHeader } from "./elements";
+import { above, below } from "./utilities";
+
+console.log(above, below);
 
 class App extends Component {
   state = {};
