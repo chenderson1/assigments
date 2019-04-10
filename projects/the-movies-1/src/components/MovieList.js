@@ -1,7 +1,7 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
 import { Movie } from "../components";
-import { ListGrid, StyledBtn } from "../elements";
+import { ListGrid, StyledBtn, CenterDiv } from "../elements";
 
 export class MovieList extends Component {
   state = {
@@ -19,24 +19,32 @@ export class MovieList extends Component {
   };
 
   componentDidMount() {
+    //make initial state data load
     this.getApiData();
   }
 
-  componentDidUpdate() {
-    this.getApiData();
+  async componentDidUpdate(prevProps, prevState) {
+    //make uodated state data load. Two cases below:
+
+    //if changing page only do that
+    if (prevState.page !== this.state.page) {
+      this.getApiData();
+    } //if changing paths reset the page number first. used await for random times page change didnt happen first.
+    else if (prevProps.location.pathname !== this.props.location.pathname) {
+      await this.setState({ page: 1 });
+      this.getApiData();
+    }
   }
 
   handleClick = e => {
     const { name } = e.target;
-    if (name === "plus") {
-      this.setState(prev => {
-        return { page: prev.page + 1 };
-      });
-    } else {
-      this.setState(prev => {
-        return { page: prev.page - 1 };
-      });
-    }
+    name === "plus"
+      ? this.setState(prev => {
+          return { page: prev.page + 1 };
+        })
+      : this.setState(prev => {
+          return { page: prev.page - 1 };
+        });
   };
 
   render() {
@@ -45,16 +53,18 @@ export class MovieList extends Component {
     });
     return (
       <Fragment>
-        <StyledBtn name="minus" onClick={this.handleClick}>
-          -
-        </StyledBtn>
-        <span style={{ color: "white", fontSize: "1.2rem" }}>
-          {this.state.page}
-        </span>
-        <StyledBtn name="plus" onClick={this.handleClick}>
-          +
-        </StyledBtn>
         <ListGrid>{mappedMovies}</ListGrid>
+        <CenterDiv>
+          <StyledBtn name="minus" onClick={this.handleClick}>
+            -
+          </StyledBtn>
+          <span style={{ color: "white", fontSize: "1.2rem" }}>
+            {this.state.page}
+          </span>
+          <StyledBtn name="plus" onClick={this.handleClick}>
+            +
+          </StyledBtn>
+        </CenterDiv>
       </Fragment>
     );
   }

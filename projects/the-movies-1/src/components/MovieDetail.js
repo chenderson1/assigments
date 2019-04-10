@@ -2,10 +2,6 @@ import React, { Component } from "react";
 import axios from "axios";
 import { Poster, BackDrop } from "../elements";
 
-const POSTER_PATH = "http://image.tmdb.org/t/p/w154";
-
-const BACKDROP_PATH = "http://image.tmdb.org/t/p/w1280";
-
 export class MovieDetail extends Component {
   state = {
     movie: {}
@@ -30,10 +26,14 @@ export class MovieDetail extends Component {
     return (
       <div>
         <BackDrop
-          src={`${BACKDROP_PATH}${movie.backdrop_path}`}
+          src={`http://image.tmdb.org/t/p/w1280${movie.backdrop_path}`}
           alt={movie.title}
         />
-        <Poster src={`${POSTER_PATH}${movie.poster_path}`} alt={movie.title} />
+
+        <Poster
+          src={`http://image.tmdb.org/t/p/w154${movie.poster_path}`}
+          alt={movie.title}
+        />
         <h1>{movie.title}</h1>
         <h3>{movie.release_date}</h3>
         <p>{movie.overview}</p>

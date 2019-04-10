@@ -6,3 +6,4 @@ export * from "./NavBar";
 export * from "./Search";
 export * from "./NotFound";
 export * from "./Home";
+export * from "./Cover";

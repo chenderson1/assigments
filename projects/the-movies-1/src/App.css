@@ -11,9 +11,13 @@ body{
 }
 
 header{
+    position: sticky;
+    top:0;
+    left:0;
+    right: 0;
     background: #0c0929;
     min-height: 12vh;
-    padding:20px;
+    padding: 10px;
     color: white;
 }
 .App-logo{

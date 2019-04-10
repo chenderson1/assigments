@@ -7,3 +7,4 @@ export * from "./ListGrid";
 export * from "./StyledInput";
 export * from "./StyledIcon";
 export * from "./BackDrop";
+export * from "./CenterDiv";

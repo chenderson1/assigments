@@ -31,6 +31,7 @@ class App extends Component {
             render={() => (
               <MovieList
                 url={`https://api.themoviedb.org/3/discover/movie?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&`}
+                {...this.props}
               />
             )}
           />
@@ -39,10 +40,8 @@ class App extends Component {
             path="/toprated"
             render={() => (
               <MovieList
-                url={`https://api.themoviedb.org/3/movie/top_rated?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&page=${
-                  this.state.page
-                }`}
-                handleClick={this.handleClick}
+                url={`https://api.themoviedb.org/3/movie/top_rated?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&`}
+                {...this.props}
               />
             )}
           />
@@ -51,10 +50,8 @@ class App extends Component {
             path="/nowplaying"
             render={() => (
               <MovieList
-                url={`https://api.themoviedb.org/3/movie/now_playing?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&page=${
-                  this.state.page
-                }`}
-                handleClick={this.handleClick}
+                url={`https://api.themoviedb.org/3/movie/now_playing?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US`}
+                {...this.props}
               />
             )}
           />
