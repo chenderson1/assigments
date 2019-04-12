@@ -8,3 +8,5 @@ export * from "./StyledInput";
 export * from "./StyledIcon";
 export * from "./BackDrop";
 export * from "./CenterDiv";
+export * from "./MovieWrapper";
+export * from "./MovieInfo";

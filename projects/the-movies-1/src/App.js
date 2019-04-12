@@ -1,4 +1,4 @@
-import React, { Component } from "react";
+import React from "react";
 import logo from "./resources/images/icons8-4k-64.png";
 import { Switch, Route, withRouter, Link } from "react-router-dom";
 import "./App.css";
@@ -11,60 +11,53 @@ import {
   Home
 } from "./components";
 import { StyledHeader } from "./elements";
-import { above, below } from "./utilities";
 
-console.log(above, below);
+const App = props => {
+  return (
+    <div className="App">
+      <StyledHeader className="App-header">
+        <Link to="/">
+          <img src={logo} className="App-logo" alt="logo" />
+        </Link>
+        <NavBar />
+      </StyledHeader>
+      <Switch>
+        <Route exact path="/" component={Home} />
+        <Route
+          path="/popular"
+          render={() => (
+            <MovieList
+              url={`https://api.themoviedb.org/3/discover/movie?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&`}
+              {...props}
+            />
+          )}
+        />
 
-class App extends Component {
-  state = {};
+        <Route
+          path="/toprated"
+          render={() => (
+            <MovieList
+              url={`https://api.themoviedb.org/3/movie/top_rated?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&`}
+              {...props}
+            />
+          )}
+        />
 
-  render() {
-    return (
-      <div className="App">
-        <StyledHeader className="App-header">
-          <Link to="/">
-            <img src={logo} className="App-logo" alt="logo" />
-          </Link>
-          <NavBar />
-        </StyledHeader>
-        <Switch>
-          <Route exact path="/" component={Home} />
-          <Route
-            path="/popular"
-            render={() => (
-              <MovieList
-                url={`https://api.themoviedb.org/3/discover/movie?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&`}
-                {...this.props}
-              />
-            )}
-          />
-
-          <Route
-            path="/toprated"
-            render={() => (
-              <MovieList
-                url={`https://api.themoviedb.org/3/movie/top_rated?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&`}
-                {...this.props}
-              />
-            )}
-          />
-
-          <Route
-            path="/nowplaying"
-            render={() => (
-              <MovieList
-                url={`https://api.themoviedb.org/3/movie/now_playing?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US`}
-                {...this.props}
-              />
-            )}
-          />
-          <Route path="/search" component={Search} />
-          <Route path="/movie/:id" component={MovieDetail} />
-          <Route component={NotFound} />
-        </Switch>
-      </div>
-    );
-  }
-}
+        <Route
+          path="/nowplaying"
+          render={() => (
+            <MovieList
+              url={`https://api.themoviedb.org/3/movie/now_playing?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US`}
+              {...props}
+            />
+          )}
+        />
+        <Route path="/search" component={Search} />
+        <Route path="/movie/:id" component={MovieDetail} />
+        <Route component={NotFound} />
+      </Switch>
+    </div>
+  );
+};
 
 export default withRouter(App);

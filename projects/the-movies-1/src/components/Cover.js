@@ -10,7 +10,8 @@ export class Cover extends Component {
       src: require("../resources/video/Smoke_Dark_11_Videvo.mov"),
       ref: videoRef => {
         this.videoRef = videoRef;
-      }
+      },
+      loop: true
     };
     return (
       <div

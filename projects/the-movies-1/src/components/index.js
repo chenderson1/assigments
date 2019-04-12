@@ -7,3 +7,4 @@ export * from "./Search";
 export * from "./NotFound";
 export * from "./Home";
 export * from "./Cover";
+export * from "./SimilarMovies";

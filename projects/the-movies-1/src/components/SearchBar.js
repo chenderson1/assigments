@@ -18,18 +18,25 @@ export class SearchBar extends Component {
 
   render() {
     return (
-      <form onSubmit={this.handleSearchSubmit}>
-        <i className="fa fa-search" aria-hidden="true" />
-        <StyledInput
-          name="searchValue"
-          type="text"
-          value={this.state.searchValue}
-          onChange={this.onInputChange}
-          minLength="3"
-          placeholder="Title, People, Genre"
-          required
-        />
-        <StyledBtn>Search</StyledBtn>
+      <form style={{ width: "100vw" }} onSubmit={this.handleSearchSubmit}>
+        <div
+          style={{
+            marginLeft: "38vw",
+            marginTop: "15vh",
+            width: "100%"
+          }}
+        >
+          <StyledInput
+            name="searchValue"
+            type="text"
+            value={this.state.searchValue}
+            onChange={this.onInputChange}
+            minLength="3"
+            placeholder="Title, People, Genre"
+            required
+          />
+          <StyledBtn>Search</StyledBtn>
+        </div>
       </form>
     );
   }

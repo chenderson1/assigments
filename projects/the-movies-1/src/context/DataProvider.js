@@ -2,7 +2,11 @@ import React, { Component } from "react";
 export const { Provider, Consumer } = React.createContext();
 
 export class DataProvider extends Component {
-  state = {};
+  state = {
+    apidat: []
+  };
+
+  handeClick() {}
 
   render() {
     return (
