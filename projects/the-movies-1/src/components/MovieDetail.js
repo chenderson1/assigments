@@ -17,7 +17,9 @@ export class MovieDetail extends Component {
     if (id) {
       try {
         const res = await axios.get(
-          `https://api.themoviedb.org/3/movie/${id}?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US`
+          `https://api.themoviedb.org/3/movie/${id}?api_key=${
+            process.env.REACT_APP_API_KEY
+          }&language=en-US`
         );
         this.setState({ movie: res.data });
         prodCom = this.state.movie.production_companies[0];
@@ -31,7 +33,7 @@ export class MovieDetail extends Component {
       const res = await axios.get(
         `https://api.themoviedb.org/3/movie/${
           this.props.match.params.id
-        }?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US`
+        }?api_key=${process.env.REACT_APP_API_KEY}&language=en-US`
       );
       this.setState({ movie: res.data });
     } catch (e) {

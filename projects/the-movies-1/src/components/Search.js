@@ -12,9 +12,9 @@ export class Search extends Component {
 
   searchMovies = async searchValue => {
     const movieRes = await axios.get(
-      `https://api.themoviedb.org/3/search/movie?api_key=7adde4820dd7c9401872a8ef46be7ecf&language=en-US&query=${searchValue}&page=${
-        this.state.page
-      }`
+      `https://api.themoviedb.org/3/search/movie?api_key=${
+        process.env.REACT_APP_API_KEY
+      }&language=en-US&query=${searchValue}&page=${this.state.page}`
     );
     this.setState({
       movies: movieRes.data.results,
