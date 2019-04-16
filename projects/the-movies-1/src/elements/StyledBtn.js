@@ -36,3 +36,12 @@ export const StyledSearchFirstBtn = styled(StyledBtn)`
     
   `}
 `;
+export const StyledHomeBtn = styled(StyledBtn)`
+  background-color: #710853;
+  padding: 5px;
+  color: white;
+  &:hover {
+    background-color: white;
+    color: #710853;
+  }
+`;

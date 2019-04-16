@@ -2,10 +2,12 @@ import React, { Component } from "react";
 import VideoCover from "react-video-cover";
 
 export class Cover extends Component {
+  // auto play after first render
   componentDidMount() {
     this.videoRef.play();
   }
   render() {
+    // video options object defined
     const videoOptions = {
       src: require("../resources/video/Smoke_Dark_11_Videvo.mov"),
       ref: videoRef => {

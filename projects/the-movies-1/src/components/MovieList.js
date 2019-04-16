@@ -1,6 +1,7 @@
 import React, { Component, Fragment } from "react";
 import axios from "axios";
 import { Movie } from "../components";
+import ReactLoading from "react-loading";
 import {
   ListGrid,
   StyledBtn,
@@ -12,13 +13,15 @@ export class MovieList extends Component {
   state = {
     movies: [],
     page: 1,
-    isless: true
+    isless: true,
+    isLoading: false
   };
 
   getApiData = async () => {
+    this.setState({ isLoading: true });
     try {
       const res = await axios.get(`${this.props.url}&page=${this.state.page}`);
-      this.setState({ movies: res.data.results });
+      this.setState({ movies: res.data.results, isLoading: false });
     } catch (e) {
       console.log(e);
     }
@@ -42,7 +45,7 @@ export class MovieList extends Component {
       this.getApiData();
     }
   }
-
+  //click handler for pagition buttons
   handleClick = e => {
     const { name } = e.target;
     name === "plus"
@@ -55,6 +58,8 @@ export class MovieList extends Component {
           }
         });
   };
+
+  //click handler for First page pagition button
   onFirstPage = () => {
     this.setState({ page: 1 });
     this.getApiData();
@@ -64,9 +69,19 @@ export class MovieList extends Component {
     const mappedMovies = this.state.movies.map(movie => {
       return <Movie key={movie.id} {...movie} />;
     });
-    return (
+
+    // conditional rendering below for loading component or content
+    return this.state.isLoading ? (
       <Fragment>
+        <CenterDiv>
+          <ReactLoading width="200px" height="200px" type="spinningBubbles" />
+        </CenterDiv>
+      </Fragment>
+    ) : (
+      <Fragment>
+        {/* ====================Listed Movies==================== */}
         <ListGrid>{mappedMovies}</ListGrid>
+        {/* =====================Pagination================================ */}
         <CenterDiv>
           <StyledSearchFirstBtn className="first" onClick={this.onFirstPage}>
             First

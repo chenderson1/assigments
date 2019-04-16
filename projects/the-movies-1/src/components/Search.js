@@ -23,7 +23,7 @@ export class Search extends Component {
   };
 
   async componentDidUpdate(prevProps, prevState) {
-    //make uodated state data load. Two cases below:
+    //make updated state data load. Two cases below:
 
     //if changing page only do that
     if (prevState.page !== this.state.page) {
@@ -54,7 +54,7 @@ export class Search extends Component {
       return <Movie key={movie.id} {...movie} />;
     });
     return (
-      <div>
+      <div style={{ height: "100vh" }}>
         <SearchBar searchMovies={this.searchMovies} />
         <ListGrid>{mappedMovies}</ListGrid>
         {this.state.movies.length > 0 && (

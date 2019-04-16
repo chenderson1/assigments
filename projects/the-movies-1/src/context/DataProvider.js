@@ -1,9 +1,12 @@
 import React, { Component } from "react";
 export const { Provider, Consumer } = React.createContext();
 
+// =================================CONTEX NOT USED. WAS JUST PRACTICE=====================================================================================
+// =========================AND PROBABLY REFERENCE FOR THE NEXT TIME I DO NEED CONTEXT==========================================================================
+
 export class DataProvider extends Component {
   state = {
-    apidat: []
+    apiData: []
   };
 
   handeClick() {}
