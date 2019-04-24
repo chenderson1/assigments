@@ -6,6 +6,7 @@ export class Cover extends Component {
   componentDidMount() {
     this.videoRef.play();
   }
+
   render() {
     // video options object defined
     const videoOptions = {
