@@ -8,8 +8,7 @@ export class AddBountyPage extends Component {
     lastName: "",
     bounty: 0,
     type: "",
-    isAlive: false,
-    isEdit: false
+    isAlive: false
   };
 
   handleChange = e => {
@@ -27,8 +26,7 @@ export class AddBountyPage extends Component {
       lastName: "",
       bounty: 0,
       type: "",
-      isAlive: false,
-      isEdit: false
+      isAlive: false
     });
   };
 

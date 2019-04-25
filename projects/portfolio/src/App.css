@@ -5,25 +5,27 @@
 
 
 body, html {
-  height: 100%;
-}
-
-.App {
+  /* height: 100%;
   background: url('./resources/images/court_blueTint.jpg') no-repeat;
   background-size: cover;
   height: 100vh;
   filter: blur(3px);
-  background-position: center;
+  background-position: center; */
+}
+
+.App {
+
 }
 
 
 
 .App-header {
-  background-color: #282c34;
-  min-height: 10vh;
+   /* background-color: #000000;
+  min-height: 20vh;
   display: flex;
   font-size: calc(10px + 2vmin);
-  color: white;
+  color: white; 
+  filter: none; */
 }
 
 .App-link {

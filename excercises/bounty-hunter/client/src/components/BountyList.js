@@ -7,6 +7,8 @@ export class BountyList extends Component {
     this.props.getBounties();
   }
 
+  componentDidUpdate(prevProps, prevState) {}
+
   render() {
     const mappedBounties = this.props.bounties.map(bounty => {
       return <Bounty key={bounty._id} {...bounty} />;
