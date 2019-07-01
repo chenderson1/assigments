@@ -1,12 +1,14 @@
+@import url("https://fonts.googleapis.com/css?family=Cabin|Open+Sans+Condensed:700|Roboto&display=swap");
 * {
   box-sizing: border-box;
   margin: 0;
+  font-family: "Cabin", sans-serif;
 }
 
-
-body, html {
-  /* height: 100%;
-  background: url('./resources/images/court_blueTint.jpg') no-repeat;
+body,
+html {
+  height: 100vh;
+  /* background: url('./resources/images/court_blueTint.jpg') no-repeat;
   background-size: cover;
   height: 100vh;
   filter: blur(3px);
@@ -14,13 +16,11 @@ body, html {
 }
 
 .App {
-
+  height: 100%;
 }
 
-
-
 .App-header {
-   /* background-color: #000000;
+  /* background-color: #000000;
   min-height: 20vh;
   display: flex;
   font-size: calc(10px + 2vmin);
@@ -31,5 +31,10 @@ body, html {
 .App-link {
   color: #61dafb;
 }
+.enableBlur > * {
+  filter: blur(1.2px);
+}
 
-
+.disableBlur {
+  filter: blur(0);
+}
