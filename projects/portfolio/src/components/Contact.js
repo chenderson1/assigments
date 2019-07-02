@@ -78,7 +78,7 @@ const Contact = () => {
                 textDecoration: "none",
                 color: "#EFB21E"
               }}
-              href="https://www.dropbox.com/s/491ztn3smgec3gb/securityPlusFinalExamResults.pdf?dl=1"
+              href="#"
             >
               RESUME
             </a>
@@ -122,7 +122,7 @@ const Contact = () => {
             </a>
             <li style={styleListItem}>
               <img style={styleImg} src={phoneLogo} alt="linkedin" />
-              (254)-423-7019
+              (510) 394-4510
             </li>
           </ul>
         </div>

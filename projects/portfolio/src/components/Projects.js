@@ -5,6 +5,7 @@ import movieAppImg from "../resources/images/movie-app-thumb.PNG";
 import musicAppImg from "../resources/images/music-app.PNG";
 import taskrAppImg from "../resources/images/taskr-app-thub.PNG";
 import lasoAppImg from "../resources/images/laso-app-thumb.PNG";
+import cssZenImg from "../resources/images/csszen.JPG";
 
 const Projects = () => {
   const porjectlist = [
@@ -14,7 +15,7 @@ const Projects = () => {
       title: "Movie-App",
       desc:
         "I am a huge Movie person and I wanted a place to be able to look up movies and box office info. The Movie App is a film catalog app that uses the themoviedb.org API to provide data. This is a work in progress and I intend to add user authentiation and DB to allow users to save list of fav movies. ",
-      tools: ["JS", "HTML", "CSS", "React"]
+      tools: ["JS", "HTML", "CSS", "React", "Styled Components"]
     },
     {
       imgURL: taskrAppImg,
@@ -22,7 +23,16 @@ const Projects = () => {
       title: "Taskr",
       desc:
         "Taskr is a To-do list at heart. Its is a app aimed towards kids/parents for chore tracking. This was a group effert to come up with an idea and build it out using version control via git and github. ",
-      tools: ["JS", "HTML", "CSS", "React", "NodeJs", "Express", "MongoDB"]
+      tools: [
+        "JS",
+        "HTML",
+        "CSS",
+        "React",
+        "NodeJs",
+        "Express",
+        "MongoDB",
+        "Styled Components"
+      ]
     },
     {
       imgURL: lasoAppImg,
@@ -33,11 +43,19 @@ const Projects = () => {
       tools: ["JS", "HTML", "CSS", "AngularJS", "NodeJs", "Express", "MongoDB"]
     },
     {
+      imgURL: cssZenImg,
+      link: "http://corys-zen-garden.surge.sh/",
+      title: "Zen Garden",
+      desc:
+        "Zen garden is a FrontEnd Project where I tried to recreate the main version of http://www.csszengarden.com/ using only HTML/CSS",
+      tools: ["HTML", "CSS"]
+    },
+    {
       imgURL: musicAppImg,
       link: "https://corys-music-app.herokuapp.com/",
       title: "Music-App",
       desc:
-        "Lorem ipsum dolor sit amet consectetur adipisicing elit. Inventore fugiat rerum ab quam esse, sapiente beatae nam nemo possimus a.",
+        "Music app is a FullStack music catalog that uses the Deezer music API. The purpose of Music App is to ba able to search for new or old music and save it your collections. As of now only your favorite tracks and albums are saved to your profile but intend to add the ability to  save custom playlist in order to organize your music. ",
       tools: ["JS", "HTML", "CSS", "React", "NodeJs", "Express", "MongoDB"]
     }
   ];
