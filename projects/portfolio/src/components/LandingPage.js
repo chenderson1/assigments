@@ -72,14 +72,7 @@ class LandingPage extends Component {
         }}
       >
         <NavBar />
-        <div
-          style={{
-            display: "flex",
-            flexFlow: "column",
-            justifyContent: "center",
-            alignItems: "center"
-          }}
-        >
+        <div className="flex-center-col">
           <time
             style={{
               color: "#7D5C83",
@@ -87,26 +80,14 @@ class LandingPage extends Component {
               marginBottom: "5vh",
               fontFamily: "Roboto"
             }}
-            id="time"
+            className="time"
           >
             {this.state.hour}:
             {this.state.min < 10 ? `0${this.state.min}` : this.state.min}:
             {this.state.sec < 10 ? `0${this.state.sec}` : this.state.sec}{" "}
             {this.state.amPm}
           </time>
-          <div
-            style={{
-              color: "white",
-              height: "40%",
-              width: "30%",
-              display: "flex",
-              flexFlow: "column",
-              justifyContent: "center",
-              alignItems: "center",
-              borderRadius: "9px",
-              fontSize: "1.2rem"
-            }}
-          >
+          <div className="flex-center-col info-container">
             <h2>
               <p style={{ marginRight: "13vw" }} id="geeting">
                 {this.state.greeting}

@@ -14,7 +14,7 @@ const Projects = () => {
       link: "http://corys-movie-app.surge.sh",
       title: "Movie-App",
       desc:
-        "I am a huge Movie person and I wanted a place to be able to look up movies and box office info. The Movie App is a film catalog app that uses the themoviedb.org API to provide data. This is a work in progress and I intend to add user authentiation and DB to allow users to save list of fav movies. ",
+        "I am a huge Movie person and I wanted a place to be able to look up movies and create playlist. The Movie App is a FullStack catalog app that comsumes the themoviedb.org API. This is a work in progress and I intend to add user authentiation and DB to allow users to save list of favorite movies by genre. ",
       tools: ["JS", "HTML", "CSS", "React", "Styled Components"]
     },
     {
@@ -22,7 +22,7 @@ const Projects = () => {
       link: "https://cory-taskr-app.herokuapp.com",
       title: "Taskr",
       desc:
-        "Taskr is a To-do list at heart. Its is a app aimed towards kids/parents for chore tracking. This was a group effert to come up with an idea and build it out using version control via git and github. ",
+        "Taskr is a FullStack To-do app at heart. It's aimed towards kids and parents for chore tracking. This was a group effert to come up with an idea and build it out using version control via git and github during a short sprint. ",
       tools: [
         "JS",
         "HTML",

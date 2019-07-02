@@ -5,36 +5,36 @@
   font-family: "Cabin", sans-serif;
 }
 
-body,
-html {
+body {
   height: 100vh;
-  /* background: url('./resources/images/court_blueTint.jpg') no-repeat;
-  background-size: cover;
-  height: 100vh;
-  filter: blur(3px);
-  background-position: center; */
 }
 
 .App {
   height: 100%;
 }
 
-.App-header {
-  /* background-color: #000000;
-  min-height: 20vh;
-  display: flex;
-  font-size: calc(10px + 2vmin);
-  color: white; 
-  filter: none; */
-}
-
 .App-link {
   color: #61dafb;
 }
-.enableBlur > * {
-  filter: blur(1.2px);
+.flex-center-col {
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: center;
+}
+/* ============================================              Landing Page              ====================================================== */
+
+.time {
+  color: #7d5c83;
+  font-size: 3rem;
+  margin-bottom: 5vh;
+  font-family: Roboto;
 }
 
-.disableBlur {
-  filter: blur(0);
+.info-container {
+  color: white;
+  height: 40%;
+  width: 30%;
+  border-radius: 9px;
+  font-size: 1.2rem;
 }
