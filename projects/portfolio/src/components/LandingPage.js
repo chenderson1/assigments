@@ -73,15 +73,7 @@ class LandingPage extends Component {
       >
         <NavBar />
         <div className="flex-center-col">
-          <time
-            style={{
-              color: "#7D5C83",
-              fontSize: "3rem",
-              marginBottom: "5vh",
-              fontFamily: "Roboto"
-            }}
-            className="time"
-          >
+          <time className="time">
             {this.state.hour}:
             {this.state.min < 10 ? `0${this.state.min}` : this.state.min}:
             {this.state.sec < 10 ? `0${this.state.sec}` : this.state.sec}{" "}
@@ -89,19 +81,15 @@ class LandingPage extends Component {
           </time>
           <div className="flex-center-col info-container">
             <h2>
-              <p style={{ marginRight: "13vw" }} id="geeting">
-                {this.state.greeting}
-              </p>
+              <p id="greeting">{this.state.greeting}</p>
             </h2>
 
             <p id="intro">
-              Im <h1 style={{ color: "yellow", fontSize: "2.5rem" }}>Cory</h1>
+              Im <h1>Cory</h1>
             </p>
             <p id="job-title">
-              <p style={{ marginLeft: "13vw" }}>a</p>
-              <h1 style={{ color: "#66BB6A", marginLeft: "13vw" }}>
-                Web Developer
-              </h1>{" "}
+              <p>a</p>
+              <h1>Web Developer</h1>
             </p>
           </div>
         </div>
@@ -109,5 +97,6 @@ class LandingPage extends Component {
     );
   }
 }
+
 export default LandingPage;
 // even though its my first programming language  and I still have so much to learn about it,  I completely identify as a Javascript Developer because I love the language and everything it and the javascript community represents. .
