@@ -65,21 +65,9 @@ const Projects = () => {
   });
 
   return (
-    <div
-      style={{
-        backgroundColor: "#28292B",
-        width: "100vw",
-        margin: "auto",
-        height: "100vh"
-      }}
-    >
+    <div className="projects">
       <NavBar />
-      <div
-        style={{
-          display: "flex",
-          justifyContent: "space-around"
-        }}
-      >
+      <div style={{}} className="project-wrapper">
         {mappedProjects}
       </div>
     </div>

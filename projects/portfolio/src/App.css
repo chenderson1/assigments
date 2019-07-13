@@ -1,4 +1,5 @@
 @import url("https://fonts.googleapis.com/css?family=Cabin|Open+Sans+Condensed:700|Roboto&display=swap");
+
 * {
   box-sizing: border-box;
   margin: 0;
@@ -16,13 +17,41 @@ body {
 .App-link {
   color: #61dafb;
 }
+
+/* ============================================              Main Nav             ====================================================== */
+
+.main-nav {
+  margin: auto;
+  padding-top: 6vh;
+  padding-bottom: 7vh;
+  min-width: 600px;
+  max-width: 30vw;
+  font-weight: bold;
+  font-size: 1.2rem;
+  font-family: Open Sans Condensed;
+}
+.main-nav ul {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  color: white;
+}
+
+.main-nav li,
+.main-nav-link {
+  color: white;
+  text-decoration: none;
+}
+
+/* ============================================              Landing Page              ====================================================== */
 .flex-center-col {
   display: flex;
   flex-flow: column;
   justify-content: center;
   align-items: center;
+  min-width: 100%;
+  max-width: 2000px;
 }
-/* ============================================              Landing Page              ====================================================== */
 
 .time {
   color: #7d5c83;
@@ -34,7 +63,7 @@ body {
 .info-container {
   color: white;
   height: 40%;
-  width: 30%;
+  min-width: 30%;
   border-radius: 9px;
   font-size: 1.2rem;
 }
@@ -54,4 +83,267 @@ body {
 .info-container #job-title h1 {
   color: #66bb6a;
   margin-left: 13vw;
+}
+/* ============================================              Skills             ====================================================== */
+
+.skills-container {
+  background-color: #28292b;
+  width: 100vw;
+  margin: auto;
+  height: 100vh;
+}
+
+.skills-container .col-2 {
+  display: flex;
+}
+
+.list {
+  height: 100%;
+  width: 50%;
+  text-align: center;
+  margin: 5vh 15vw;
+}
+
+.list-header {
+  color: #efb21e;
+  font-weight: bold;
+  font-family: Open Sans Condensed;
+  font-size: 1.2rem;
+}
+
+.list-desc {
+  color: grey;
+  text-align: justify;
+  margin-top: 2vh;
+}
+
+.skills-container span {
+  color: #7d5c83;
+  font-weight: bold;
+  font-family: Open Sans Condensed;
+  font-size: 1.2rem;
+}
+
+.skills-container .col-2 ul {
+  border-radius: 10px;
+  padding: 20px;
+  margin: 3vh 5vw;
+  height: 27vh;
+  text-align: center;
+  list-style: none;
+  color: #50af6f;
+  display: flex;
+  justify-content: space-between;
+  flex-flow: column;
+  text-transform: uppercase;
+}
+
+.logos {
+  margin: 4vh auto;
+  display: flex;
+  justify-content: space-around;
+  width: 80vw;
+}
+.logos img {
+  height: 130px;
+  width: 130px;
+  margin-right: 3vw;
+}
+/* ============================================              Projects            ====================================================== */
+.projects {
+  background-color: #28292b;
+  width: 100vw;
+  margin: auto;
+  height: 100vh;
+}
+.project-wrapper {
+  display: flex;
+  justify-content: space-around;
+  flex-wrap: wrap;
+  width: 90%;
+  height: 100%;
+  margin: 0 auto;
+}
+.project-contianer {
+  width: 300px;
+  height: 500px;
+  background-color: black;
+  opacity: 0.5;
+  color: white;
+  border-radius: 9px;
+  box-shadow: 1px 1px 20px black;
+  margin-bottom: 5vh;
+}
+.project-contianer img {
+  width: 100%;
+  height: 200px;
+  border-top-right-radius: 9px;
+  border-top-left-radius: 9px;
+  margin-bottom: 0.5vh;
+}
+.project-list {
+  padding: 10px;
+  display: flex;
+  flex-flow: column;
+  align-content: space-between;
+}
+.project-list h3 {
+  margin-bottom: 2vh;
+}
+.project-list b {
+  color: #50af6f;
+}
+.project-list a {
+  color: #efb21e;
+  text-decoration: none;
+}
+.project-list p {
+  margin-bottom: 1vh;
+  margin-top: 1vh;
+}
+.tools {
+  width: 100%;
+  overflow-wrap: break-word;
+  padding: 3px;
+}
+
+/* ============================================             Contact           ====================================================== */
+.contact-container {
+  background-color: #28292b;
+  width: 100vw;
+  margin: auto;
+  height: 100vh;
+}
+
+.contact-container .col-2 {
+  width: 100%;
+  height: 80%;
+  display: flex;
+  align-items: center;
+}
+
+.contact-container .col-2 .item1 {
+  height: 65%;
+  width: 50vw;
+  display: flex;
+  flex-flow: column;
+  justify-content: center;
+  align-items: flex-end;
+}
+
+.contact-container .col-2 .item1 img {
+  margin-right: 3vw;
+  height: 450px;
+  width: 450px;
+  margin-bottom: 3vh;
+  border-radius: 9px;
+  box-shadow: 1px 1px 25px #1d1d1f;
+}
+
+.contact-container .item1 p {
+  color: grey;
+}
+.contact-container .item1 a {
+  margin-right: 3vw;
+  margin-top: 1vh;
+  margin-left: 0.25vw;
+  text-decoration: none;
+  color: #efb21e;
+}
+
+.contact-container .col-2 .item2 {
+  height: "65%";
+  width: 50vw;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.col-2 .item2 ul {
+  margin-left: 1vw;
+  list-style: none;
+  color: white;
+}
+.col-2 .item2 li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 3vh;
+  color: #50af6f;
+}
+.col-2 .item2 li img {
+  height: 100px;
+  width: 100px;
+  margin-right: 2vw;
+}
+
+.col-2 .item2 ul a {
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+/* ============================================             Media Queries           ====================================================== */
+@media (max-width: 650px) {
+  .main-nav {
+    min-width: 100vw;
+  }
+  .main-nav ul {
+    flex-flow: column;
+    align-items: center;
+  }
+  .main-nav li {
+    margin-bottom: 3vh;
+  }
+}
+@media (max-width: 900px) {
+  .skills-container .col-2 {
+    flex-flow: column;
+    align-items: center;
+  }
+  .skills-container .col-2 li {
+    margin-bottom: 2vh;
+  }
+  .logos {
+    flex-flow: column;
+    align-items: center;
+  }
+  .logos img {
+    margin-bottom: 2vh;
+  }
+  .skills-container {
+    height: 100%;
+  }
+  .contact-container {
+    height: 100%;
+  }
+  .contact-container .col-2 {
+    flex-flow: column;
+    align-items: center;
+  }
+}
+
+@media (max-width: 1400px) {
+  .list {
+    margin: 5vh 8vw;
+  }
+
+  .logos img {
+    height: 90px;
+    width: 90px;
+  }
+  .contact-container .col-2 .item1 img {
+    width: 300px;
+    height: 300px;
+  }
+  .col-2 .item2 img {
+    height: 70px;
+    width: 70px;
+  }
+  .col-2 .item2 li {
+    font-size: 0.9rem;
+  }
+}
+@media (max-width: 1670px) {
+  .projects {
+    height: 100%;
+  }
 }

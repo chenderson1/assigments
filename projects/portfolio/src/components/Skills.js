@@ -10,88 +10,20 @@ import jwtLogo from "../resources/skill_icons/jwt.svg";
 import NavBar from "./NavBar";
 
 const Skills = () => {
-  const style = {
-    color: "#7D5C83",
-    fontWeight: "bold",
-    fontFamily: "Open Sans Condensed",
-    fontSize: "1.2rem"
-  };
-  const styleLogo = {
-    height: "130px",
-    width: "130px",
-    marginRight: "3vw"
-  };
-  const styleList = {
-    borderRadius: "10px",
-    padding: "20px",
-    margin: "3vh 5vw",
-    height: "27vh",
-    textAlign: "center",
-    listStyle: "none",
-    color: "#50AF6F",
-    display: "flex",
-    justifyContent: "space-between",
-    flexFlow: "column",
-    textTransform: "uppercase"
-  };
-
   return (
-    <div
-      style={{
-        backgroundColor: "#28292B",
-        width: "100vw",
-        margin: "auto",
-        height: "100vh"
-      }}
-    >
-      {/* <p
-        style={{
-          color: "#fff",
-          textAlign: "center"
-        }}
-      >
-        Skills/Tools
-      </p> */}
+    <div className="skills-container">
       <NavBar />
-      <div
-        style={{
-          display: "flex"
-          // marginTop: "10vh"
-        }}
-      >
-        <div
-          style={{
-            height: "100%",
-            width: "50%",
-            textAlign: "center",
-            margin: "5vh 15vw"
-          }}
-        >
-          <p
-            style={{
-              color: "#EFB21E",
-              fontWeight: "bold",
-              fontFamily: "Open Sans Condensed",
-              fontSize: "1.2rem"
-            }}
-          >
-            FRONT-END SKILLS
-          </p>
-          <p
-            style={{
-              color: "grey",
-              textAlign: "left",
-              marginTop: "2vh"
-            }}
-          >
+      <div className="col-2">
+        <div className="list">
+          <p className="list-header">FRONT-END SKILLS</p>
+          <p className="list-desc">
             Strong Javascript foundation with experience in hand-coding HTML
             using semantic markup, and CSS layout and positioning. Including but
-            not limited to modern tools like <span style={style}> GRID</span>,
-            <span style={style}> FLEXBOX</span>,{" "}
-            <span style={style}> React Context</span>, and
-            <span style={style}> ES6 </span>syntax.
+            not limited to modern tools like <span> GRID</span>,
+            <span> FLEXBOX</span>, <span> React Context</span>, and
+            <span> ES6 </span>syntax.
           </p>
-          <ul style={styleList}>
+          <ul>
             <li>Javascript/ES6 </li>
             <li>React</li>
             <li>HTML</li>
@@ -99,37 +31,15 @@ const Skills = () => {
             <li>Styled Components</li>
           </ul>
         </div>
-        <div
-          style={{
-            height: "100%",
-            width: "50%",
-            textAlign: "center",
-            margin: "5vh 15vw"
-          }}
-        >
-          <p
-            style={{
-              color: "#EFB21E",
-              fontWeight: "bold",
-              fontFamily: "Open Sans Condensed",
-              fontSize: "1.2rem"
-            }}
-          >
-            BACK-END SKILLS
+        <div className="list">
+          <p className="list-header">BACK-END SKILLS</p>
+          <p className="list-desc">
+            Experience building <span>NoSQL</span> Database-driven
+            <span> SPA</span> web applications with scalable{" "}
+            <span>RESTful APIs</span> providing User Authentication via{" "}
+            <span>JSON Web Tokens</span>.
           </p>
-          <p
-            style={{
-              color: "grey",
-              textAlign: "left",
-              marginTop: "2vh"
-            }}
-          >
-            Experience building <span style={style}>NoSQL</span> Database-driven
-            <span style={style}> SPA</span> web applications with scalable{" "}
-            <span style={style}>RESTful APIs</span> providing User
-            Authentication via <span style={style}>JSON Web Tokens</span>.
-          </p>
-          <ul style={styleList}>
+          <ul>
             <li>Node </li>
             <li>Express </li>
             <li>MongoDb</li>
@@ -140,21 +50,15 @@ const Skills = () => {
           </ul>
         </div>
       </div>
-      <div
-        style={{
-          margin: "4vh 3vw",
-          display: "flex",
-          justifyContent: "space-between"
-        }}
-      >
-        <img style={styleLogo} src={jsLogo} alt="javscript" />
-        <img style={styleLogo} src={reactLogo} alt="javscript" />
-        <img style={styleLogo} src={nodeLogo} alt="javscript" />
-        <img style={styleLogo} src={htmlLogo} alt="javscript" />
-        <img style={styleLogo} src={cssLogo} alt="javscript" />
-        <img style={styleLogo} src={mongoLogo} alt="javscript" />
-        <img style={styleLogo} src={gitLogo} alt="javscript" />
-        <img style={styleLogo} src={jwtLogo} alt="javscript" />
+      <div className="logos">
+        <img src={jsLogo} alt="javscript" />
+        <img src={reactLogo} alt="javscript" />
+        <img src={nodeLogo} alt="javscript" />
+        <img src={htmlLogo} alt="javscript" />
+        <img src={cssLogo} alt="javscript" />
+        <img src={mongoLogo} alt="javscript" />
+        <img src={gitLogo} alt="javscript" />
+        <img src={jwtLogo} alt="javscript" />
       </div>
       {/* <p style={style}>
         footnote: i really enjoy learning how Javascript works internally in
