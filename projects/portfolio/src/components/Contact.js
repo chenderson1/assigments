@@ -18,7 +18,9 @@ const Contact = () => {
           />
           <p>
             PLEASE DOWNLOAD MY
-            <a href="#">RESUME</a>
+            <a href="https://www.dropbox.com/s/kc33mdoghxy6kb7/Henderson_Cory_Res_2019%28Jul%29.docx?dl=1">
+              RESUME
+            </a>
           </p>
         </div>
         <div className="item2">

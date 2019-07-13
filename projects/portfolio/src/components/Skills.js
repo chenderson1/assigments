@@ -18,7 +18,7 @@ const Skills = () => {
           <p className="list-header">FRONT-END SKILLS</p>
           <p className="list-desc">
             Strong Javascript foundation with experience in hand-coding HTML
-            using semantic markup, and CSS layout and positioning. Including but
+            using semantic markup and CSS layout and positioning. Including but
             not limited to modern tools like <span> GRID</span>,
             <span> FLEXBOX</span>, <span> React Context</span>, and
             <span> ES6 </span>syntax.
