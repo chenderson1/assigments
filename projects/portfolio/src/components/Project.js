@@ -14,18 +14,27 @@ const Project = props => {
 
   return (
     <div className="project-contianer">
-      <a href={link} target="_blank">
+      <a
+        href={link === "#" ? "#" : link}
+        target={link === "#" ? null : "_blank"}
+      >
         <img src={imgURL} alt="Avatar" />
       </a>
 
       <div className="project-list">
-        <a href={link === "#" ? title : link} target="_blank">
+        <a
+          href={link === "#" ? "#" : link}
+          target={link === "#" ? null : "_blank"}
+        >
           <h3>
             <b>{title}</b>
           </h3>
-          <a href={link === "#" ? title : link} target="_blank">
-            {link === "#" ? title : link}
-          </a>
+        </a>
+        <a
+          href={link === "#" ? "#" : link}
+          target={link === "#" ? null : "_blank"}
+        >
+          {link === "#" ? title : link}
         </a>
         <p>{desc}</p>
         <a href={git} target="_blank">

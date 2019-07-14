@@ -82,7 +82,7 @@ const Projects = () => {
       imgURL: musicAppImg,
       git: " https://github.com/chenderson1/music-app",
 
-      link: "https://corys-music-app.herokuapp.com",
+      link: "#",
       title: "Music-App",
       desc:
         "A Full-Stack music catalog that uses the Deezer music API. The purpose of Music App is to search for and save music to your profile. As of now only your favorite tracks and albums are saved. I intend to add the ability to  save custom playlist in order to organize your music. ",

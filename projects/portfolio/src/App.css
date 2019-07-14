@@ -284,6 +284,16 @@ body {
 }
 
 /* ============================================             Media Queries           ====================================================== */
+
+@media (max-width: 400px) {
+  .contact-container .col-2 {
+    border: red solid 1px;
+  }
+  .contact-container .col-2 .item1 {
+    align-items: flex-start;
+  }
+}
+
 @media (max-width: 650px) {
   .main-nav {
     min-width: 100vw;
@@ -296,6 +306,9 @@ body {
     margin-bottom: 3vh;
   }
   .contact-container .col-2 {
+    align-items: center;
+  }
+  .contact-container .col-2 .item1 {
     align-items: center;
   }
   .contact-container .col-2 .item1 p {
