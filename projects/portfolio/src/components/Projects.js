@@ -17,7 +17,7 @@ const Projects = () => {
       link: "http://corys-movie-app.surge.sh",
       title: "Movie-App",
       desc:
-        "The Movie App is a Full-Stack movie catalog app that consumes the Themoviedb.org API. This is a work in progress and I intend to add user authentication and DB to allow users to save list of favorite movies by genre.",
+        "The Movie App is a movie catalog app that consumes the Themoviedb.org API. This is a work in progress and I intend to add user authentication and DB to allow users to save list of favorite movies by genre.",
       tools: ["JS", "HTML", "CSS", "React", "Styled Components"]
     },
     {
